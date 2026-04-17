@@ -8,7 +8,7 @@ type MealItemProps = {
   fat: number;
 };
 
-export function MealItem({
+export default function MealItem({
   name,
   calories,
   protein,

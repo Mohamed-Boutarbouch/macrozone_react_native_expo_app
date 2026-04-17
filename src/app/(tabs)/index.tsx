@@ -1,8 +1,8 @@
 import { Text, ScrollView } from 'react-native';
 import { globalStyles } from '@/styles/global';
-import { HomeHeader } from '../components/home-header';
-import { MacroGrid } from '../components/macro-grid';
-import { RecentMeals } from '../components/recent-meals';
+import HomeHeader from '../components/home-header';
+import MacroGrid from '../components/macro-grid';
+import RecentMeals from '../components/recent-meals';
 
 export default function HomeScreen() {
   return (

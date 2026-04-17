@@ -1,8 +1,8 @@
 import { Text, View } from 'react-native';
 import { globalStyles } from '@/styles/global';
-import { MealItem } from './meal-item';
+import MealItem from './meal-item';
 
-export function RecentMeals() {
+export default function RecentMeals() {
   return (
     <View style={{ marginTop: 30 }}>
       <Text style={globalStyles.sectionTitle}>Recent Meals</Text>

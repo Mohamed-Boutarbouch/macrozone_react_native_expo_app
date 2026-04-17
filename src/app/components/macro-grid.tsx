@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import { MacroCard } from './macro-card';
+import MacroCard from './macro-card';
 
-export function MacroGrid() {
+export default function MacroGrid() {
   return (
     <View style={styles.grid}>
       <MacroCard label='Calories' value='0' goal='2,000' color='#ff6b6b' />

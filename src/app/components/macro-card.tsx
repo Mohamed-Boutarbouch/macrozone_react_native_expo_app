@@ -7,7 +7,7 @@ type MacroCardProps = {
   color: string;
 };
 
-export function MacroCard({
+export default function MacroCard({
   label,
   value,
   goal,
