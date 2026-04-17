@@ -8,8 +8,8 @@ export default function HomeScreen() {
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>MacroZone</Text>
       <HomeHeader />
-      <Link href='/meals' style={{ fontSize: 18, color: '#007bff' }}>
-        Go to Meals
+      <Link href='/add-meal' style={{ fontSize: 18, color: '#007bff' }}>
+        Go to Add Meal
       </Link>
     </ScrollView>
   );
