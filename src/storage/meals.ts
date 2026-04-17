@@ -29,3 +29,10 @@ export async function addMeal(
   await AsyncStorage.setItem(MEALS_KEY, JSON.stringify([newMeal, ...meals]));
   return newMeal;
 };
+
+export async function deleteMeal(id: string): Promise<void> {
+  const meals = await getMeals();
+  const filtered = meals.filter((meal) => meal.id !== id);
+  await AsyncStorage.setItem(MEALS_KEY, JSON.stringify(filtered));
+};
+
