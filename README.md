@@ -25,7 +25,7 @@ This project showcases expertise in building production-ready mobile application
   <img src="./assets/images/adding_new_meal.jpeg" alt="Adding a New Meal" width="200" style="margin: 0 10px;" />
   <img src="./assets/images/meal_history_list.jpeg" alt="Meal History List" width="200" style="margin: 0 10px;" />
   <br/>
-  <p><i>Left to right: <strong>Dashboard</strong> tracking daily goals, <strong>Add Meal</strong> flow, and <strong>Meals List</strong> history view. <br>(Replace these placeholders with actual screenshots from the app!)</i></p>
+  <p><i>Left to right: <strong>Dashboard</strong> tracking daily goals, <strong>Add Meal</strong> flow, and <strong>Meals List</strong> history view.</i></p>
 </div>
 
 ## ✨ Key Features
