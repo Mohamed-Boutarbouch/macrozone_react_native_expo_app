@@ -1,56 +1,104 @@
-# Welcome to your Expo app 👋
+# MacroZone
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<div align="center">
+  <img src="./assets/images/icon.png" alt="MacroZone Logo" width="120" />
+  
+  <h3>Modern Macronutrient & Meal Tracking Application</h3>
+  
+  <p>
+    A high-performance React Native mobile application built with Expo to seamlessly track daily nutrition, log meals, and manage dietary goals. 
+  </p>
+</div>
 
-## Get started
+---
 
-1. Install dependencies
+## 📖 Overview
 
+**MacroZone** is a robust mobile application designed to simplify daily nutritional tracking. Developed with modern React Native and Expo infrastructure, it provides users with an intuitive interface for logging meals, monitoring macronutrients (Proteins, Carbohydrates, and Fats), and persisting user data securely on the device.
+
+This project showcases expertise in building production-ready mobile applications, utilizing state-of-the-art libraries for routing, animations, and local storage.
+
+### 📱 App Previews
+
+<div align="center">
+  <img src="./assets/images/daily_macronutrient_dashboard.jpeg" alt="Daily Macronutrient Dashboard" width="200" style="margin: 0 10px;" />
+  <img src="./assets/images/adding_new_meal.jpeg" alt="Adding a New Meal" width="200" style="margin: 0 10px;" />
+  <img src="./assets/images/meal_history_list.jpeg" alt="Meal History List" width="200" style="margin: 0 10px;" />
+  <br/>
+  <p><i>Left to right: <strong>Dashboard</strong> tracking daily goals, <strong>Add Meal</strong> flow, and <strong>Meals List</strong> history view. <br>(Replace these placeholders with actual screenshots from the app!)</i></p>
+</div>
+
+## ✨ Key Features
+
+- **Intuitive Meal Logging**: Quickly add and categorize meals with a streamlined user interface.
+- **Macronutrient Dashboard**: Visualize daily intake of calories, proteins, carbs, and fats.
+- **File-Based Routing**: Clean and scalable navigation managed entirely via Expo Router.
+- **Local Persistence**: Offline-first architecture using `@react-native-async-storage/async-storage`.
+- **Smooth Animations**: High-performance UI interactions powered by `react-native-reanimated`.
+- **Native Integrations**: Utilizes device features like Haptic Feedback (`expo-haptics`) for an enhanced user experience.
+
+## 🛠 Tech Stack
+
+- **Framework**: [React Native](https://reactnative.dev/)
+- **Toolchain**: [Expo](https://expo.dev/) (SDK 55)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/)
+- **Animations**: [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- **Storage**: [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+
+## 📂 Project Structure
+
+```text
+macrozone/
+├── src/
+│   ├── app/           # Expo Router file-based routing
+│   │   ├── (tabs)/    # Bottom tab navigation screens
+│   │   └── components/# Reusable UI components
+│   ├── storage/       # AsyncStorage utilities and data models
+│   ├── styles/        # Global theming and styling configuration
+│   └── utils/         # Helper functions and business logic
+├── assets/            # Static assets (images, icons, fonts)
+├── app.json           # Expo configuration
+└── package.json       # Project dependencies and scripts
+```
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- Expo Go app on your physical device, or an iOS Simulator / Android Emulator
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mohamed-Boutarbouch/macrozone_react_native_expo_app.git
+   cd macrozone
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. Open the app:
+   - Scan the QR code in your terminal using the **Expo Go** app on your phone.
+   - Or press `i` to open in the iOS simulator.
+   - Or press `a` to open in the Android emulator.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 💡 Architecture & Design Decisions
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Offline-First & Local Persistence**: By utilizing `AsyncStorage`, the application provides an offline-first experience. Users can log meals and view their history instantaneously without relying on network latency or an active internet connection. This guarantees a snappy, reliable user experience and serves as an excellent foundation before migrating to a cloud database.
+- **File-Based Routing System**: Transitioning from traditional component-based routing, the app leverages **Expo Router** to automatically map the file system to navigation routes. This significantly reduces boilerplate, enforces a clean project structure, and provides deep linking capabilities out of the box.
+- **60fps UI Animations**: To ensure the app feels premium and native, **React Native Reanimated** was chosen over standard React Native animations. Reanimated offloads animation logic to the UI thread, bypassing the JavaScript thread to maintain a buttery smooth 60 frames per second, even during complex transitions.
+- **Strict Type Safety**: The entire codebase is built with strict **TypeScript** configurations. This design choice dramatically reduces runtime errors, documents expected data structures directly within the code, and greatly improves long-term code maintainability.
+- **Component-Driven Design**: The UI architecture follows the Single Responsibility Principle, broken down into atomic, highly reusable components. This modularity ensures that style updates or logical changes are isolated, making the application highly scalable for future feature additions.
